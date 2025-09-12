@@ -1,0 +1,310 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  background-color: #111;
+  color: #fff;
+  font-size: 10px;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+}
+
+#root {
+  height: 100%;
+  font-size: 1.5rem;
+}
+
+#root > section {
+  border: 3px solid green;
+  padding: 1rem;
+}
+
+
+/* ---------------------------------------- */
+
+
+#root > section > header {
+  width: 100%;
+  border: 2px solid violet;
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#root > section > header > section {
+  width: 35%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#root > section > header > section:first-child {
+  border: 1px solid yellow;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+#root > section > header > section:first-child > div {
+  width: 4rem;
+  height: 4rem;
+  background-color: hsla(0, 0%, 100%, .9);;
+  border-radius: 50%;
+  margin-left: 2rem;
+}
+
+#root > section > header > section:first-child > div:hover {
+  cursor: grab;
+}
+
+#root > section > header > section:nth-child(2) {
+  border: 1px solid orange;
+  align-items: center;
+  justify-content: center;
+}
+
+#root > section > header > section:nth-child(2) > div {
+  width: 4rem;
+  height: 4rem;
+  background-color: hsla(0, 0%, 100%, .5);;
+  border-radius: 50%;
+}
+
+#root > section > header > section:nth-child(2) > div:hover {
+  border: 2px solid #fff;
+  cursor: grab;
+}
+
+#root > section > header > section:last-child {
+  justify-content: flex-end;
+}
+
+#root > section > header > section:last-child > div{
+  border: 1px solid blue;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  right: 0;
+  gap: 2rem;
+}
+
+#root > section > header > section:last-child > div > div:first-child {
+  margin-right: 2rem;
+}
+
+#root > section > header > section:last-child > div > div:first-child:hover {
+  font-weight: 700;
+  color: #fff;
+  cursor: grab;
+}
+
+#root > section > header > section:last-child > div > .tiny-icon:hover {
+  background-color: #fff;
+  cursor: grab;
+}
+
+#root > section > header > section:last-child > div > div:last-child {
+  width: 5rem;
+  height: 5rem;
+  background-color: hsla(0, 0%, 100%, .1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+#root > section > header > section:last-child > div > div:last-child:hover {
+  border: 2px solid #fff;
+  cursor: grab;
+}
+
+.user-logo{
+  width: 3.5rem;
+  height: 3.5rem;
+  font-size: 2rem;
+  font-weight: 600;
+  background-color: #724418;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #111;
+}
+
+input[type="text"] {
+  width: 50rem;
+  background-color: hsla(0, 0%, 100%, .1);
+  border-radius: 20px;
+  border: none;
+  color: #fff;
+  padding: 1.2rem 2rem;
+  font-size: inherit;
+}
+
+input::placeholder {
+  color: hsla(0, 0%, 100%, .7);
+}
+
+
+/* ---------------------------------------- */
+
+
+main {
+  width: 100%;
+  border: 2px solid yellow;
+  height: calc(100vh - 18rem);
+  display: flex;
+}
+
+main > aside:first-child {
+  border: 2px solid red;
+  width: 30rem;
+}
+
+
+main > section {
+  border: 2px solid green;
+  width: calc(100vw - 70rem);
+}
+
+
+main > aside:last-child {
+  border: 2px solid blue;
+  width: 40rem;
+}
+
+/* ---------------------------------------- */
+
+
+#root > section > footer {
+  border: 2px solid violet;
+  height: 8rem;
+  padding: 5rem 1rem 4rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#root > section > footer > section {
+  width: 35%;
+  display: flex;
+  align-items: center;
+}
+
+#root > section > footer > section:first-child {
+  border: 2px solid blue;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1.5rem;
+}
+
+#root > section > footer > section:first-child > div:first-child {
+  width: 6rem;
+  height: 6rem;
+  background-color: #3f797c;
+  border-radius: 5px;
+}
+
+#root > section > footer > section:first-child > div:nth-child(2) {
+  text-align: center;
+}
+
+#root > section > footer > section:nth-child(2) {
+  border: 2px solid red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#root > section > footer > section:nth-child(2) > div:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+#root > section > footer > section:nth-child(2) > div:first-child > div:nth-child(3) {
+  width: 4rem;
+  height: 4rem;
+  background-color: hsla(0, 0%, 100%, .5);;
+  border-radius: 50%;
+}
+
+#root > section > footer > section:nth-child(2) > div:last-child {
+display: flex;
+gap: 1.5rem;
+}
+
+.progress-bar-song-container {
+  width: 55rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.progress-bar-song-white {
+  height: .4rem;
+  border-radius: 20px;
+  background-color: #fff;
+  width: 58%;
+}
+
+.progress-bar-grey {
+  height: .4rem;
+  border-radius: 20px;
+  background-color: #fff;
+  width: 100%;
+  opacity: .4;
+}
+
+.progress-bar-volume-container {
+  width: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.progress-bar-volume-white {
+  height: .4rem;
+  border-radius: 20px;
+  background-color: #fff;
+  width: 240%;
+}
+
+#root > section > footer > section:last-child{
+  border: 1px solid pink;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+
+/* ---------------------------------------- */
+
+
+.tiny-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  opacity: .75;
+}
+
+.song-logo {
+  width: 5rem;
+  height: 5rem;
+  background-color: #203E24;
+  border-radius: 5px;
+}
