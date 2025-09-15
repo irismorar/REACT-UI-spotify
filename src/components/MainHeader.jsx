@@ -8,17 +8,17 @@ export default function MainHeader() {
       </section>
 
       <section>
-        <div></div>
+        <button></button>
         <input type="text" placeholder="What do you want to play?" />
       </section>
 
       <section>
         <div>
-          <div>Install App</div>
+          <button>Install App</button>
           <TinyIcon />
           <TinyIcon />
           <div>
-            <div className="user-logo">I</div>
+            <button className="user-logo">I</button>
           </div>
         </div>
       </section>

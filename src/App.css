@@ -25,7 +25,6 @@ body {
 }
 
 #root > section {
-  border: 3px solid green;
   padding: 1rem;
 }
 
@@ -35,11 +34,11 @@ body {
 
 #root > section > header {
   width: 100%;
-  border: 2px solid violet;
-  height: 6rem;
+  height: 4rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 1rem;
 }
 
 #root > section > header > section {
@@ -50,7 +49,6 @@ body {
 }
 
 #root > section > header > section:first-child {
-  border: 1px solid yellow;
   align-items: center;
   justify-content: flex-start;
 }
@@ -58,31 +56,31 @@ body {
 #root > section > header > section:first-child > div {
   width: 4rem;
   height: 4rem;
-  background-color: hsla(0, 0%, 100%, .9);;
+  background-color: hsla(0, 0%, 100%, .9);
   border-radius: 50%;
   margin-left: 2rem;
 }
 
 #root > section > header > section:first-child > div:hover {
-  cursor: grab;
+  cursor: pointer;
 }
 
 #root > section > header > section:nth-child(2) {
-  border: 1px solid orange;
   align-items: center;
   justify-content: center;
+  gap: 1rem;
 }
 
-#root > section > header > section:nth-child(2) > div {
+#root > section > header > section:nth-child(2) > button {
   width: 4rem;
   height: 4rem;
-  background-color: hsla(0, 0%, 100%, .5);;
+  background-color: hsla(0, 0%, 100%, .5);
   border-radius: 50%;
+  border: none;
 }
 
-#root > section > header > section:nth-child(2) > div:hover {
+#root > section > header > section:nth-child(2) > button:hover {
   border: 2px solid #fff;
-  cursor: grab;
 }
 
 #root > section > header > section:last-child {
@@ -90,7 +88,6 @@ body {
 }
 
 #root > section > header > section:last-child > div{
-  border: 1px solid blue;
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -98,19 +95,16 @@ body {
   gap: 2rem;
 }
 
-#root > section > header > section:last-child > div > div:first-child {
+#root > section > header > section:last-child > div > button:first-child {
   margin-right: 2rem;
+  background-color: #111;
+  bordeR: none;
 }
 
-#root > section > header > section:last-child > div > div:first-child:hover {
+#root > section > header > section:last-child > div > button:first-child:hover {
   font-weight: 700;
   color: #fff;
-  cursor: grab;
-}
-
-#root > section > header > section:last-child > div > .tiny-icon:hover {
-  background-color: #fff;
-  cursor: grab;
+  cursor: pointer;
 }
 
 #root > section > header > section:last-child > div > div:last-child {
@@ -125,7 +119,7 @@ body {
 
 #root > section > header > section:last-child > div > div:last-child:hover {
   border: 2px solid #fff;
-  cursor: grab;
+  cursor: pointer;
 }
 
 .user-logo{
@@ -134,6 +128,7 @@ body {
   font-size: 2rem;
   font-weight: 600;
   background-color: #724418;
+  border: none;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -162,25 +157,150 @@ input::placeholder {
 main {
   width: 100%;
   border: 2px solid yellow;
-  height: calc(100vh - 18rem);
+  height: calc(100vh - 16.5rem);
   display: flex;
+  gap: .7rem;
 }
 
 main > aside:first-child {
   border: 2px solid red;
-  width: 30rem;
+  width: 35rem;
+  height: 100%;
+  background-color: hsla(0, 0%, 100%, .03);
+  border-radius: 10px;
 }
+
+main > aside:first-child button {
+  background-color: hsla(0, 0%, 100%, .08);
+  border: none;
+}
+
+main > aside:first-child button:hover {
+  background-color: hsla(0, 0%, 100%, .2);
+}
+
+main > aside:first-child > section:first-child {
+  border: 1px dashed white;
+  height: 5rem;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+main > aside:first-child > section:first-child > h3:hover {
+  cursor: pointer;
+}
+
+.create-library-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.create-library-button {
+  border-radius: 20px;
+  font-weight: 600;
+  padding: .5rem 1.3rem;
+}
+
+main > aside:first-child > section:nth-child(2) {
+  border: 1px dashed violet;
+  height: 5rem;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+main > aside:first-child > section:nth-child(2) button{
+  border-radius: 20px;
+  padding: .5rem 1.3rem;
+}
+
+.library-playlist-container {
+  border: 1px dashed lightblue;
+  height: calc(100vh - 27rem);
+  overflow-y: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: lightgray transparent;
+}
+
+.library-playlist-container:hover {
+  overflow-y: auto;
+}
+
+.library-playlist-container-menu{
+  border: 1px dashed blue;
+  height: 3rem;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.library-playlist-container-menu > div {
+  display: flex;
+  gap: 1rem;
+}
+
+.library-playlist-container-menu > div > button:first-child {
+  background-color: inherit;
+}
+
+.library-playlist-container-menu> div > button:first-child:hover {
+  font-weight: 700;
+  background-color: inherit;
+}
+
+
+/* ---Aside Playlist--- */
+.library-playlist-list {
+  list-style: none;
+  padding: .5rem 1rem;
+  margin: 0;
+}
+
+.library-playlist-list > li {
+  display: flex;
+  gap: 1.5rem;
+  padding: .7rem;
+  border-radius: 10px;
+}
+
+.library-playlist-list > li:hover {
+  background-color: hsla(0, 0%, 100%, .05);
+}
+
+.playlist-infos {
+  display: flex;
+  flex-direction: column;
+}
+
+.playlist-infos > div:nth-child(2) {
+  display: flex;
+  align-items: center;
+  opacity: .6
+}
+/* ------ */
 
 
 main > section {
   border: 2px solid green;
-  width: calc(100vw - 70rem);
+  width: calc(100vw - 75rem);
+  background: linear-gradient(hsla(0, 0%, 100%, .1),hsla(0, 0%, 100%, .03),hsla(0, 0%, 100%, .03), hsla(0, 0%, 100%, .03));
+  border-radius: 10px;
 }
+
+
+
 
 
 main > aside:last-child {
   border: 2px solid blue;
   width: 40rem;
+  background-color: hsla(0, 0%, 100%, .03);
+  border-radius: 10px;
 }
 
 /* ---------------------------------------- */
@@ -202,56 +322,63 @@ main > aside:last-child {
 }
 
 #root > section > footer > section:first-child {
-  border: 2px solid blue;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   gap: 1.5rem;
 }
 
-#root > section > footer > section:first-child > div:first-child {
+.current-song-logo {
   width: 6rem;
   height: 6rem;
-  background-color: #3f797c;
+  background-color: #55c0c6;
   border-radius: 5px;
 }
 
-#root > section > footer > section:first-child > div:nth-child(2) {
-  text-align: center;
+.current-song-infos {
+  display: flex;
+  flex-direction: column;
 }
 
 #root > section > footer > section:nth-child(2) {
-  border: 2px solid red;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
 
-#root > section > footer > section:nth-child(2) > div:first-child {
+.current-song-commands {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1.5rem;
 }
 
-#root > section > footer > section:nth-child(2) > div:first-child > div:nth-child(3) {
+ .current-song-commands > button:nth-child(3) {
   width: 4rem;
   height: 4rem;
   background-color: hsla(0, 0%, 100%, .5);;
   border-radius: 50%;
+  border: none;
 }
 
-#root > section > footer > section:nth-child(2) > div:last-child {
-display: flex;
-gap: 1.5rem;
+.current-song-commands > button:nth-child(3):hover {
+  border: 2px solid #fff;
+}
+
+.current-song-timing {
+  display: flex;
+  gap: 1.5rem;
 }
 
 .progress-bar-song-container {
   width: 55rem;
   display: flex;
   align-items: center;
-  justify-content: center;
+}
+
+.progress-bar-song-container{
+  cursor: pointer;
 }
 
 .progress-bar-song-white {
@@ -259,6 +386,10 @@ gap: 1.5rem;
   border-radius: 20px;
   background-color: #fff;
   width: 58%;
+}
+
+.progress-bar-song-container:hover .progress-bar-song-white{
+  background-color: #28C83E;
 }
 
 .progress-bar-grey {
@@ -273,7 +404,10 @@ gap: 1.5rem;
   width: 8rem;
   display: flex;
   align-items: center;
-  justify-content: center;
+}
+
+.progress-bar-volume-container:hover {
+  cursor: pointer;
 }
 
 .progress-bar-volume-white {
@@ -283,8 +417,11 @@ gap: 1.5rem;
   width: 240%;
 }
 
+.progress-bar-volume-container:hover .progress-bar-volume-white {
+  background-color: #28C83E;
+}
+
 #root > section > footer > section:last-child{
-  border: 1px solid pink;
   display: flex;
   justify-content: flex-end;
   gap: 1rem;
@@ -302,9 +439,17 @@ gap: 1.5rem;
   opacity: .75;
 }
 
+.tiny-icon:hover {
+  background-color: #fff;
+}
+
 .song-logo {
   width: 5rem;
   height: 5rem;
-  background-color: #203E24;
+  background-color: #37454b;
   border-radius: 5px;
+}
+
+button:hover {
+  cursor: pointer;
 }
