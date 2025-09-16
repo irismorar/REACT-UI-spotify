@@ -6,8 +6,8 @@ export default function MainFooter() {
       <section>
         <div className="current-song-logo"></div>
         <div className="current-song-infos">
-          <div>Song 4000</div>
-          <div>Artist 97</div>
+          <div>Song name</div>
+          <div>Artist name</div>
         </div>
         <TinyIcon isActive={true} />
       </section>
@@ -16,7 +16,7 @@ export default function MainFooter() {
         <div className="current-song-commands">
           <TinyIcon />
           <TinyIcon />
-          <button></button>
+          <button className="home-play-button"></button>
           <TinyIcon />
           <TinyIcon isActive={true} />
         </div>

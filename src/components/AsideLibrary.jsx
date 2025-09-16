@@ -1,4 +1,3 @@
-import SongLogo from "../tidbits/SongLogo";
 import TinyIcon from "../tidbits/TinyIcon";
 import AsidePlaylist from "../tidbits/AsidePlaylist";
 

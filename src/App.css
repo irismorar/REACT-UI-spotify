@@ -29,7 +29,7 @@ body {
 }
 
 
-/* ---------------------------------------- */
+/* -------------------HEADER--------------------- */
 
 
 #root > section > header {
@@ -53,15 +53,23 @@ body {
   justify-content: flex-start;
 }
 
-#root > section > header > section:first-child > div {
+.logo-spotify {
   width: 4rem;
   height: 4rem;
   background-color: hsla(0, 0%, 100%, .9);
+  color: transparent;
+  font-size: 1rem;
   border-radius: 50%;
   margin-left: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-#root > section > header > section:first-child > div:hover {
+.logo-spotify:hover {
+  background-color: hsla(0, 0%, 100%, .2);
+  border: 4px solid hsla(0, 0%, 100%, .9);
+  color: #28C83E;
   cursor: pointer;
 }
 
@@ -71,7 +79,7 @@ body {
   gap: 1rem;
 }
 
-#root > section > header > section:nth-child(2) > button {
+.home-play-button {
   width: 4rem;
   height: 4rem;
   background-color: hsla(0, 0%, 100%, .5);
@@ -79,15 +87,15 @@ body {
   border: none;
 }
 
-#root > section > header > section:nth-child(2) > button:hover {
-  border: 2px solid #fff;
+.home-play-button:hover {
+  border: 4px solid #fff;
 }
 
 #root > section > header > section:last-child {
   justify-content: flex-end;
 }
 
-#root > section > header > section:last-child > div{
+.header-account-container{
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -95,19 +103,18 @@ body {
   gap: 2rem;
 }
 
-#root > section > header > section:last-child > div > button:first-child {
+.header-account-container > button:first-child {
   margin-right: 2rem;
   background-color: #111;
   bordeR: none;
 }
 
-#root > section > header > section:last-child > div > button:first-child:hover {
+.header-account-container > button:first-child:hover {
   font-weight: 700;
   color: #fff;
-  cursor: pointer;
 }
 
-#root > section > header > section:last-child > div > div:last-child {
+.header-account-container > div:last-child {
   width: 5rem;
   height: 5rem;
   background-color: hsla(0, 0%, 100%, .1);
@@ -117,8 +124,8 @@ body {
   border-radius: 50%;
 }
 
-#root > section > header > section:last-child > div > div:last-child:hover {
-  border: 2px solid #fff;
+.header-account-container > div:last-child:hover {
+  border: 4px solid #fff;
   cursor: pointer;
 }
 
@@ -127,7 +134,7 @@ body {
   height: 3.5rem;
   font-size: 2rem;
   font-weight: 600;
-  background-color: #724418;
+  background-color: #7d431d;
   border: none;
   border-radius: 50%;
   display: flex;
@@ -151,7 +158,7 @@ input::placeholder {
 }
 
 
-/* ---------------------------------------- */
+/* -------------------MAIN--------------------- */
 
 
 main {
@@ -270,10 +277,12 @@ main > aside:first-child > section:nth-child(2) button{
 
 .library-playlist-list > li:hover {
   background-color: hsla(0, 0%, 100%, .05);
+  cursor: pointer;
 }
 
 .playlist-infos {
   display: flex;
+  justify-content: center;
   flex-direction: column;
 }
 
@@ -303,7 +312,164 @@ main > aside:last-child {
   border-radius: 10px;
 }
 
-/* ---------------------------------------- */
+main > aside:last-child > header {
+  padding: 1rem 1.5rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.aside-header-song-name-container{
+  display: flex;
+  gap: 1rem;
+}
+
+.aside-header-song-name-container:hover > button:first-child {
+  display: block;
+}
+
+.aside-header-song-name-container > button:first-child{
+  display: none;
+}
+
+.aside-header-song-name-container > div {
+  width: 26rem;
+  font-weight: 700;
+}
+
+.aside-header-song-name-container > div:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+main > aside:last-child > header > div:nth-child(2) {
+  visibility: hidden;
+  display: flex;
+  gap: 1rem;
+}
+
+main > aside:last-child > header:hover > div:nth-child(2){
+  visibility: visible;
+}
+
+.aside-song-infos-container {
+  height: calc(100vh - 22rem);
+  padding: 0 1.5rem;
+  overflow-y: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: lightgray transparent;
+}
+
+.aside-song-infos-container:hover {
+  overflow-y: auto;
+}
+
+.song-infos-container {
+  height: 5rem;
+  margin: 2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.song-name-info {
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+.song-name-info:hover {
+  text-decoration: underline;
+}
+
+.song-infos-container > div:first-child > div:nth-child(2) {
+  font-size: 1.8rem;
+}
+
+.song-infos-container > div:nth-child(2) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.song-infos-container > div:nth-child(2) > button:first-child {
+  display: none;
+}
+
+.song-infos-container:hover > div:nth-child(2) > button:first-child {
+  display: block;
+}
+
+.aside-info-about-artist-foto {
+  width: 35.5rem;
+  height: 20rem;
+  background-color: #0a373a;
+  border-radius: 10px 10px 0 0;
+}
+
+.infos-about-artist-section {
+  width: 35.5rem;
+  height: 10rem;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  background-color: hsla(0, 0%, 100%, .03);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.artist-section {
+  border-radius: 0 0 10px 10px;
+}
+
+.infos-about-artist-section > button {
+  border-radius: 20px;
+  font-weight: 600;
+  padding: .5rem 1.3rem;
+  background-color: hsla(0, 0%, 100%, .08);
+  border: 1px solid #fff;
+}
+
+.infos-about-artist-section > div > div:first-child {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.infos-about-artist-section > button:hover{
+  background-color: hsla(0, 0%, 100%, .2);
+}
+
+.aside-song-infos-container > section:last-child > section:last-child {
+  width: 35.5rem;
+  height: 10rem;
+  border-radius: 10px;
+  padding: 1rem 1.5rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  background-color: hsla(0, 0%, 100%, .03);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.aside-song-infos-container > section:last-child > section:last-child > button {
+  width: 20rem;
+  border-radius: 20px;
+  font-weight: 600;
+  padding: .5rem 1.3rem;
+  background-color: hsla(0, 0%, 100%, .08);
+  border: 1px solid #fff;
+}
+
+.aside-song-infos-container > section:last-child > section:last-child > button:hover {
+  background-color: hsla(0, 0%, 100%, .2);
+}
+
+
+
+/* -------------------FOOTER--------------------- */
 
 
 #root > section > footer {
@@ -352,18 +518,6 @@ main > aside:last-child {
   align-items: center;
   justify-content: center;
   gap: 1.5rem;
-}
-
- .current-song-commands > button:nth-child(3) {
-  width: 4rem;
-  height: 4rem;
-  background-color: hsla(0, 0%, 100%, .5);;
-  border-radius: 50%;
-  border: none;
-}
-
-.current-song-commands > button:nth-child(3):hover {
-  border: 2px solid #fff;
 }
 
 .current-song-timing {
@@ -448,8 +602,28 @@ main > aside:last-child {
   height: 5rem;
   background-color: #37454b;
   border-radius: 5px;
+  color: transparent;
+}
+
+.song-logo:hover {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: hsla(0, 0%, 100%, .9);
 }
 
 button:hover {
+  cursor: pointer;
+}
+
+.big-song-icon {
+  width: 35.5rem;
+  height: 35.5rem;
+  background-color: #55c0c6;
+  border-radius: 10px;
+  border: 5px solid hsla(0, 0%, 100%, .9);
+}
+
+.big-song-icon:hover {
   cursor: pointer;
 }

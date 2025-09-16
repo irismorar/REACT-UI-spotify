@@ -1,3 +1,3 @@
 export default function SongLogo() {
-  return <div className="song-logo"></div>;
+  return <div className="song-logo">Play</div>;
 }

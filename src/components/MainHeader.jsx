@@ -4,16 +4,16 @@ export default function MainHeader() {
   return (
     <header>
       <section>
-        <div></div>
+        <div className="logo-spotify">Spotify</div>
       </section>
 
       <section>
-        <button></button>
+        <button className="home-play-button"></button>
         <input type="text" placeholder="What do you want to play?" />
       </section>
 
       <section>
-        <div>
+        <div className="header-account-container">
           <button>Install App</button>
           <TinyIcon />
           <TinyIcon />
