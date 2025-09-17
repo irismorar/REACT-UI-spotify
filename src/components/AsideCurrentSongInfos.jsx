@@ -1,7 +1,7 @@
-import TinyIcon from "../tidbits/TinyIcon";
-import BigSongIcon from "../tidbits/BigSongIcon";
+import { TinyIcon } from "../tidbits/TinyIcon";
+import { BigSongIcon } from "../tidbits/BigSongIcon";
 
-export default function AsideCurrentSongInfos() {
+export function AsideCurrentSongInfos() {
   return (
     <aside>
       <header>
@@ -36,7 +36,7 @@ export default function AsideCurrentSongInfos() {
               <div>infos</div>
               <div>infos</div>
             </div>
-            <button>Follow</button>
+            <button className="aside-artist-infos-button">Follow</button>
           </section>
 
           <section className="infos-about-artist-section">
@@ -45,12 +45,17 @@ export default function AsideCurrentSongInfos() {
               <div>infos</div>
               <div>infos</div>
             </div>
-            <button>Follow</button>
+            <div>
+              <button className="show-all-button">Show all</button>
+              <button className="aside-artist-infos-button">Follow</button>
+            </div>
           </section>
 
           <section>
             <div>Your queue is empty</div>
-            <button>Search for something new</button>
+            <button className="aside-artist-infos-button">
+              Search for something new
+            </button>
           </section>
         </section>
       </section>

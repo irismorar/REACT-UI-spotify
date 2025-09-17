@@ -178,7 +178,9 @@ main > aside:first-child {
 }
 
 main > aside:first-child button {
-  background-color: hsla(0, 0%, 100%, .08);
+  background-color: hsla(0, 0%, 100%, .1);
+  padding: .5rem 1.3rem;
+  border-radius: 20px;
   border: none;
 }
 
@@ -205,9 +207,7 @@ main > aside:first-child > section:first-child > h3:hover {
 }
 
 .create-library-button {
-  border-radius: 20px;
   font-weight: 600;
-  padding: .5rem 1.3rem;
 }
 
 main > aside:first-child > section:nth-child(2) {
@@ -294,12 +294,205 @@ main > aside:first-child > section:nth-child(2) button{
 /* ------ */
 
 
-main > section {
+.main-menu {
   border: 2px solid green;
   width: calc(100vw - 75rem);
   background: linear-gradient(hsla(0, 0%, 100%, .1),hsla(0, 0%, 100%, .03),hsla(0, 0%, 100%, .03), hsla(0, 0%, 100%, .03));
   border-radius: 10px;
+  padding-left: 3rem;
+  overflow-y: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: lightgray transparent;
 }
+
+.main-menu:hover {
+  overflow-y: auto;
+}
+
+.main-menu > header {
+  border: 2px solid blue;
+  padding: 1rem 0;
+}
+
+main > section > header > button {
+  background-color: hsla(0, 0%, 100%, .1);
+  padding: .5rem 1.3rem;
+  border-radius: 20px;
+  border: none;
+  margin-right: 1rem;
+}
+
+main > section > header > button[data-is-active="true"] {
+  background-color: hsla(0, 0%, 100%, .9);
+  color: #222;
+}
+
+main > section > header > button:hover {
+  background-color: hsla(0, 0%, 100%, .2);
+}
+
+.playlists-menu {
+  border: 1px solid red;
+  padding: 1rem 0 3rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.playlist-main-menu-item {
+  width: calc((100vw - 87rem) / 4);
+  height: 5rem;
+  padding-right: 1rem;
+  background-color: hsla(0, 0%, 100%, .1);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.playlist-main-menu-item:hover {
+  background-color: hsla(0, 0%, 100%, .2);
+  cursor: pointer;
+}
+
+.playlist-main-menu-item > div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.playlist-main-menu-item .playlist-logo:hover {
+  color: transparent;
+}
+
+.playlist-main-menu-item > div > span {
+  font-weight: 600;
+}
+
+.playlist-main-menu-item > button:last-child {
+  background-color: #28C83E;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  opacity: .75;
+  border: none;
+  display: none;
+}
+
+.playlist-main-menu-item:hover > button:last-child {
+  display: block;
+}
+
+.main-menu > section:nth-child(3) {
+  border: 1px dashed orange;
+  height: 30rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.getting-started-music-section {
+  border: 1px solid red;
+  width: 48.5%;
+}
+
+.getting-started-music-section > header {
+  border: 1px dashed white;
+  height: 6rem;
+  padding-right: 1rem;
+  font-weight: 700;
+  font-size: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.getting-started-music-section > header > div:last-child {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.getting-started-music-section > header > div:last-child:hover {
+  cursor: pointer;
+}
+
+.getting-started-music-section > header > div:last-child button {
+  font-size: 2.5rem;
+  background-color: transparent;
+  border: none;
+}
+
+.getting-started-music-section > header > div:last-child button:hover {
+  font-weight: 700;
+}
+
+.tips-container {
+  background-color: #4e542e;
+  height: 24rem;
+  padding: 1.5rem;
+  display: flex;
+  align-items: flex-end;
+}
+
+.tips-container > div {
+  display: flex;
+  gap: 2rem;
+}
+
+.tips-container > div > button:first-child {
+  background-color: #28C83E;
+  width: 7rem;
+  height: 3rem;
+  border-radius: 20rem;
+  border: none;
+  font-weight: 700;
+  color: #222;
+}
+
+.tips-container > div > button:first-child:hover {
+  background-color:#2bd542;
+}
+
+.tips-container .show-all-button:hover {
+  text-decoration: none;
+}
+
+.for-you-music-section {
+  border: 1px dashed violet;
+  width: 48.5%;
+}
+
+.for-you-music-section > header {
+  border: 1px dashed pink;
+  height: 6rem;
+  padding-right: 3rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.for-you-music-section > header > span {
+  line-height: 1rem;
+}
+
+.for-you-music-section > header > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.for-you-music-section > header > div > div:first-child {
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+
+.for-you-music-section > section {
+  display: flex;
+  gap: 1rem;
+  overflow-x: hidden;
+}
+
+
+
+
 
 
 
@@ -363,6 +556,7 @@ main > aside:last-child > header:hover > div:nth-child(2){
 
 .aside-song-infos-container:hover {
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .song-infos-container {
@@ -371,11 +565,13 @@ main > aside:last-child > header:hover > div:nth-child(2){
   display: flex;
   align-items: center;
   justify-content: space-between;
+  color:hsla(0, 0%, 100%, .5);
 }
 
 .song-name-info {
-  font-size: 2.2rem;
+  font-size: 2.5rem;
   font-weight: 700;
+  color: hsla(0, 0%, 100%, .9);
 }
 
 .song-name-info:hover {
@@ -415,6 +611,7 @@ main > aside:last-child > header:hover > div:nth-child(2){
   border-radius: 10px;
   margin-bottom: 2rem;
   background-color: hsla(0, 0%, 100%, .03);
+  color: hsla(0, 0%, 100%, .5);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -424,21 +621,18 @@ main > aside:last-child > header:hover > div:nth-child(2){
   border-radius: 0 0 10px 10px;
 }
 
-.infos-about-artist-section > button {
-  border-radius: 20px;
-  font-weight: 600;
-  padding: .5rem 1.3rem;
-  background-color: hsla(0, 0%, 100%, .08);
-  border: 1px solid #fff;
-}
-
-.infos-about-artist-section > div > div:first-child {
+.infos-about-artist-section > div:first-child > div:first-child {
+  border: 1px solid red;
   font-size: 1.8rem;
   font-weight: 700;
+  color: hsla(0, 0%, 100%, .9);
 }
 
-.infos-about-artist-section > button:hover{
-  background-color: hsla(0, 0%, 100%, .2);
+.infos-about-artist-section > div:last-child {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
 }
 
 .aside-song-infos-container > section:last-child > section:last-child {
@@ -456,17 +650,7 @@ main > aside:last-child > header:hover > div:nth-child(2){
 
 .aside-song-infos-container > section:last-child > section:last-child > button {
   width: 20rem;
-  border-radius: 20px;
-  font-weight: 600;
-  padding: .5rem 1.3rem;
-  background-color: hsla(0, 0%, 100%, .08);
-  border: 1px solid #fff;
 }
-
-.aside-song-infos-container > section:last-child > section:last-child > button:hover {
-  background-color: hsla(0, 0%, 100%, .2);
-}
-
 
 
 /* -------------------FOOTER--------------------- */
@@ -597,7 +781,7 @@ main > aside:last-child > header:hover > div:nth-child(2){
   background-color: #fff;
 }
 
-.song-logo {
+.playlist-logo {
   width: 5rem;
   height: 5rem;
   background-color: #37454b;
@@ -605,7 +789,7 @@ main > aside:last-child > header:hover > div:nth-child(2){
   color: transparent;
 }
 
-.song-logo:hover {
+.playlist-logo:hover {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -614,6 +798,19 @@ main > aside:last-child > header:hover > div:nth-child(2){
 
 button:hover {
   cursor: pointer;
+}
+
+.aside-artist-infos-button {
+  border-radius: 20px;
+  font-weight: 600;
+  padding: .5rem 1.3rem;
+  background-color: transparent;
+  border: 1px solid hsla(0, 0%, 100%, .5);
+  color: hsla(0, 0%, 100%, .9);;
+}
+
+.aside-artist-infos-button:hover{
+  border: 2px solid hsla(0, 0%, 100%, .9);
 }
 
 .big-song-icon {
@@ -626,4 +823,33 @@ button:hover {
 
 .big-song-icon:hover {
   cursor: pointer;
+}
+
+.show-all-button{
+  background-color: transparent;
+  border: none;
+  font-weight: 600;
+  color:hsla(0, 0%, 100%, .5);
+}
+
+.show-all-button:hover {
+cursor: pointer;
+text-decoration: underline;
+color:hsla(0, 0%, 100%, .9);
+}
+
+.song-wallpaper-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.song-wallpaper-container > div {
+  width: 16rem;
+  height: 16rem;
+  background-color: #1e253f;
+  border-radius: 10px;
+}
+
+.song-wallpaper-container > p {
+  color:hsla(0, 0%, 100%, .5);
 }

@@ -1,11 +1,12 @@
-import AsideLibrary from "./AsideLibrary";
-import AsideCurrentSongInfos from "./AsideCurrentSongInfos";
+import { AsideLibrary } from "./AsideLibrary";
+import { AsideCurrentSongInfos } from "./AsideCurrentSongInfos";
+import { MainMusicSection } from "./MainMusicSection";
 
-export default function MainContent() {
+export function MainContent() {
   return (
     <main>
       <AsideLibrary />
-      <section>MAIN B</section>
+      <MainMusicSection />
       <AsideCurrentSongInfos />
     </main>
   );

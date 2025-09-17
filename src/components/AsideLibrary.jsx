@@ -1,7 +1,7 @@
-import TinyIcon from "../tidbits/TinyIcon";
-import AsidePlaylist from "../tidbits/AsidePlaylist";
+import { TinyIcon } from "../tidbits/TinyIcon";
+import { AsidePlaylist } from "../tidbits/AsidePlaylist";
 
-export default function AsideLibrary() {
+export function AsideLibrary() {
   return (
     <aside>
       <section>

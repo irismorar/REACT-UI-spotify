@@ -1,4 +1,4 @@
-export default function TinyIcon({ isActive }) {
+export function TinyIcon({ isActive }) {
   return (
     <button
       className="tiny-icon"

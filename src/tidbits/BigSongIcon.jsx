@@ -1,3 +1,3 @@
-export default function BigSongIcon() {
+export function BigSongIcon() {
   return <div className="big-song-icon"></div>;
 }

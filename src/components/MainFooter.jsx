@@ -1,6 +1,6 @@
-import TinyIcon from "../tidbits/TinyIcon";
+import { TinyIcon } from "../tidbits/TinyIcon";
 
-export default function MainFooter() {
+export function MainFooter() {
   return (
     <footer>
       <section>

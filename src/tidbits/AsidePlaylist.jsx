@@ -1,6 +1,6 @@
-import SongLogo from "./SongLogo";
+import { PlaylistLogo } from "./PlaylistLogo";
 
-export default function AsidePlaylist() {
+export function AsidePlaylist() {
   return (
     <ul className="library-playlist-list">
       {[
@@ -121,7 +121,7 @@ function AsidePlaylistLi({
 }) {
   return (
     <li>
-      <SongLogo />
+      <PlaylistLogo />
       <div className="playlist-infos">
         <div
           style={{ color: isSelected ? "#28C83E" : "#fff", fontSize: "1.5rem" }}
