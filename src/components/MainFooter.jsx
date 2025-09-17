@@ -7,7 +7,7 @@ export function MainFooter() {
         <div className="current-song-logo"></div>
         <div className="current-song-infos">
           <div>Song name</div>
-          <div>Artist name</div>
+          <div>Artist</div>
         </div>
         <TinyIcon isActive={true} />
       </section>

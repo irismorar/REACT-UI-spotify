@@ -20,7 +20,7 @@ export function AsideCurrentSongInfos() {
         <section className="song-infos-container">
           <div>
             <div className="song-name-info">Song name</div>
-            <div>Artist name</div>
+            <div>Artist</div>
           </div>
           <div>
             <TinyIcon />
@@ -32,7 +32,7 @@ export function AsideCurrentSongInfos() {
           <div className="aside-info-about-artist-foto"></div>
           <section className="infos-about-artist-section artist-section">
             <div>
-              <div>Artist name</div>
+              <div>Artist</div>
               <div>infos</div>
               <div>infos</div>
             </div>

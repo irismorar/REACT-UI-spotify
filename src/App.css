@@ -622,7 +622,6 @@ main > aside:last-child > header:hover > div:nth-child(2){
 }
 
 .infos-about-artist-section > div:first-child > div:first-child {
-  border: 1px solid red;
   font-size: 1.8rem;
   font-weight: 700;
   color: hsla(0, 0%, 100%, .9);
