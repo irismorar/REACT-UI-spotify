@@ -5,7 +5,7 @@ export function MainFooter() {
     <footer>
       <section>
         <div className="current-song-logo"></div>
-        <div className="current-song-infos">
+        <div className="current-song-info">
           <div>Song name</div>
           <div>Artist</div>
         </div>

@@ -5,131 +5,72 @@ export function AsidePlaylist() {
     <ul className="library-playlist-list">
       {[
         {
+          id: 1,
           isSelected: false,
-          name: "Playlist name",
-          type: "Playlist",
-          artist: "Author",
         },
         {
+          id: 2,
           isSelected: false,
-          name: "Playlist name",
-          type: "Playlist",
-          artist: "Author",
         },
         {
+          id: 3,
           isSelected: true,
-          name: "Album name",
-          type: "Album",
-          artist: "Author",
         },
         {
+          id: 4,
           isSelected: false,
-          name: "Compilation name",
-          type: "Compilation",
-          artist: "Author",
         },
         {
+          id: 5,
           isSelected: false,
-          name: "Playlist name",
-          type: "Playlist",
-          artist: "Author",
         },
         {
+          id: 6,
           isSelected: false,
-          name: "Playlist name",
-          type: "Playlist",
-          artist: "Author",
         },
         {
+          id: 7,
           isSelected: false,
-          name: "EP name",
-          type: "EP",
-          artist: "Author",
         },
         {
+          id: 8,
           isSelected: false,
-          name: "Album name",
-          type: "Album",
-          artist: "Author",
         },
         {
+          id: 9,
           isSelected: false,
-          name: "Playlist name",
-          type: "Playlist",
-          artist: "Author",
         },
         {
+          id: 10,
           isSelected: false,
-          name: "Playlist name",
-          type: "Playlist",
-          artist: "Author",
         },
         {
+          id: 11,
           isSelected: false,
-          name: "Playlist name",
-          type: "Playlist",
-          artist: "Author",
         },
         {
+          id: 12,
           isSelected: false,
-          name: "Album name",
-          type: "Album",
-          artist: "Author",
         },
-        {
-          isSelected: false,
-          name: "Compilation name",
-          type: "Compilation",
-          artist: "Author",
-        },
-        {
-          isSelected: false,
-          name: "Album name",
-          type: "Album",
-          artist: "Author",
-        },
-        {
-          isSelected: false,
-          name: "Playlist name",
-          type: "Playlist",
-          artist: "Author",
-        },
-        {
-          isSelected: false,
-          name: "EP name",
-          type: "EP",
-          artist: "Author",
-        },
-      ].map((playlist, index) => (
-        <AsidePlaylistLi
-          key={index}
-          isSelected={playlist.isSelected}
-          playlistname={playlist.name}
-          playlisttype={playlist.type}
-          playlistartist={playlist.artist}
-        />
+      ].map((playlist) => (
+        <AsidePlaylistLi key={playlist.id} isSelected={playlist.isSelected} />
       ))}
     </ul>
   );
 }
 
-function AsidePlaylistLi({
-  isSelected,
-  playlistname,
-  playlisttype,
-  playlistartist,
-}) {
+function AsidePlaylistLi({ isSelected }) {
   return (
     <li>
       <PlaylistLogo />
-      <div className="playlist-infos">
+      <div className="playlist-info">
         <div
           style={{ color: isSelected ? "#28C83E" : "#fff", fontSize: "1.5rem" }}
         >
-          {playlistname}
+          Title
         </div>
         <div>
-          <div>{playlisttype}</div>
+          <div>Type</div>
           <div
             style={{
               margin: ".5rem",
@@ -139,7 +80,7 @@ function AsidePlaylistLi({
               background: "#fff",
             }}
           ></div>
-          <div>{playlistartist}</div>
+          <div>Author</div>
         </div>
       </div>
     </li>

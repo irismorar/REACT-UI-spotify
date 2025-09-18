@@ -1,5 +1,5 @@
 import { AsideLibrary } from "./AsideLibrary";
-import { AsideCurrentSongInfos } from "./AsideCurrentSongInfos";
+import { AsideCurrentSongInfo } from "./AsideCurrentSongInfo";
 import { MainMusicSection } from "./MainMusicSection";
 
 export function MainContent() {
@@ -7,7 +7,7 @@ export function MainContent() {
     <main>
       <AsideLibrary />
       <MainMusicSection />
-      <AsideCurrentSongInfos />
+      <AsideCurrentSongInfo />
     </main>
   );
 }
